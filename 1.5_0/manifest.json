@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/jquery.js", "js/background/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/48.png",
+      "default_popup": "auth/login.html"
+   },
+   "content_scripts": [ {
+      "css": [ "css/inject.css" ],
+      "js": [ "js/jquery.js", "js/moment.js", "services/ordersReview/injection.js" ],
+      "matches": [ "https://sellercentral.amazon.com/orders-v3/*", "https://sellercentral.amazon.com.au/orders-v3/*", "https://sellercentral.amazon.co.uk/orders-v3/*", "https://sellercentral.amazon.ca/orders-v3/*", "https://sellercentral.amazon.de/orders-v3/*", "https://sellercentral.amazon.co.jp/orders-v3/*", "https://sellercentral.amazon.fr/orders-v3/*", "https://sellercentral.amazon.es/orders-v3/*", "https://sellercentral.amazon.it/orders-v3/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Easy-to-use review requests for Amazon orders.",
+   "homepage_url": "https://www.sellerise.com/",
+   "icons": {
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "48": "images/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArPmNaeCHsK1ygb+CbdY+3o6PDKMyfgi6dQ9EJ1BprwOZL87bhCbd5rTjkCrfQWxJKE40G6lGVTXaA9lvwAR2zQCyNMQ+14//Xgca/uB7zC8O/ElDKgfSRt8vk4ngJnkz53sG4xdZL21LYXmXcz+gNzyaCZjgOmghgdPUr8xmdZocdwecdUc4MI+WuPKNS6MgGriceO2He2iF7az5QAS7pXOLjZUj5aqpMWP5tq7WRCi6ZMhB1w1kERYRoFhbtBmJdserN6KxCFjOpXUrLp/Sf8Z9Ns7+D1mCt6jhaMILyJzHvssedRCdaHbFAu7YN8ZaOBvpouGmdoOLgfgTjLkivwIDAQAB",
+   "manifest_version": 2,
+   "name": "Sellerise",
+   "permissions": [ "tabs", "background", "identity", "cookies", "webNavigation", "storage", "unlimitedStorage", "https://sellercentral.amazon.com/orders-v3/*", "https://sellercentral.amazon.com.au/orders-v3/*", "https://sellercentral.amazon.co.uk/orders-v3/*", "https://sellercentral.amazon.ca/orders-v3/*", "https://sellercentral.amazon.de/orders-v3/*", "https://sellercentral.amazon.co.jp/orders-v3/*", "https://sellercentral.amazon.fr/orders-v3/*", "https://sellercentral.amazon.es/orders-v3/*", "https://sellercentral.amazon.it/orders-v3/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5",
+   "web_accessible_resources": [ "*" ]
+}
